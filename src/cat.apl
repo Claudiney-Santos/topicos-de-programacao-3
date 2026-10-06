@@ -35,9 +35,11 @@ ISFILE:
     ⊣{ ⊣("\n%s\n===\n" (,⊃1↑⍵)) ⎕FIO.fprintf 1 ⋄ ⊣{ ("%s\n" (⍵)) ⎕FIO.fprintf 1 }¨ ⊃(1↓⍵) }¨ text
     →0
 INPUT:
+    ⊣(⊂"Digite )OFF para encerrar o programa\n") ⎕FIO.fprintf 1
+LOOP:
     text ← ⍞
-    ⊣("'%s'\n" (⊃text)) ⎕FIO.fprintf 1
-    INPUT→text ≢ ")OFF"
+    ⊣("\"%s\"\n" (⊃text)) ⎕FIO.fprintf 1
+    LOOP→text ≢ ")OFF"
 ∇
 
 ]BOXING 8
