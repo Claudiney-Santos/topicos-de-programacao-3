@@ -1,9 +1,5 @@
 #!/usr/bin/env -S apl "-s --"
 
-∇result ← printerr msg
-    ⊣msg ⎕FIO.fprintf 2
-∇
-
 ∇files ← list_files path; result
     files ← ⍬
     result ← ⎕FIO.dir_files path
